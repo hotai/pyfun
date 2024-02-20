@@ -1,0 +1,25 @@
+<start>     ::= <stmt> |
+                <bool_expr>
+<stmt>      ::= <bool_expr> |
+                <var_decl> '=' <bool_expr> |
+                <if_stmt> |
+                <while_stmt>
+<var_decl>  ::= 'var' <var_name>
+<if_stmt>   ::= 'if' <bool_expr> 'then' <stmt> 'elif' <bool_expr> 'then' <stmt> 'else' <stmt>
+<while_stmt>::= 'while' <bool_expr> do <stmt>
+<bool_expr> ::= <comp_expr> 'and' | 'or' <comp_expr>
+<comp_expr> ::= <expr> '>' | '>=' | '<' | '<=' | '==' <expr>
+<expr>      ::= <term> '+' <expr> |
+                <term> '-' <expr> |
+                <term>
+<term>      ::= <factor> '*' <term> |
+                <factor> '/' <term> |
+                <factor>
+<factor>    ::= <integer> [.] [<integer>] |
+                <var_name> |
+                '(' <bool_expr> ')' |
+                '+' | '-' <factor> |
+                'not' <bool_expr>
+<integer>   ::= 0...9 |
+                <var_name>
+<var_name>  ::= <alpha> [<alpha>]
