@@ -25,7 +25,7 @@ while text != 'q':
             stmt = stmt.strip()
             if stmt:
                 result = pscript.eval(stmt)
-                print(f'Evaluated to:     {result}')
+                print(f'Evaluated to:     {result}\n')
     except Exception as e:
         print(f"Error evaluating expression '{text}':", e)
     finally:
