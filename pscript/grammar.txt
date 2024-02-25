@@ -1,5 +1,4 @@
-<start>     ::= <stmt> |
-                <bool_expr>
+<start>     ::= <stmt> [';' <stmt>]
 <stmt>      ::= <bool_expr> |
                 <var_decl> '=' <bool_expr> |
                 <if_stmt> |
@@ -15,7 +14,7 @@
 <term>      ::= <factor> '*' <term> |
                 <factor> '/' <term> |
                 <factor>
-<factor>    ::= <integer> [.] [<integer>] |
+<factor>    ::= <integer> ['.'] [<integer>] |
                 <var_name> |
                 '(' <bool_expr> ')' |
                 '+' | '-' <factor> |

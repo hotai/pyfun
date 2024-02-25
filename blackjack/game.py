@@ -89,7 +89,7 @@ class Game:
         else:
             if player_hand.get_value() > dealer_hand.get_value():
                 print("You win!")
-            if player_hand.get_value() == dealer_hand.get_value():
+            elif player_hand.get_value() == dealer_hand.get_value():
                 print("It's a tie!")
             else:
                 print("Dealer wins!")

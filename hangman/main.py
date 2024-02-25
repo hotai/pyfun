@@ -59,7 +59,7 @@ def play():
         
     # check win/lose
     if bad_guesses == 8:
-        print(f"Sorry, bruh, you a loser! The word was '{word}'.")
+        print(f"Sorry, bruh, you're a loser! The word was '{word}'.")
     elif "".join(guessed_word) == word:
         print(f"You rock, bruh! The word is '{word}'.")
     else:
